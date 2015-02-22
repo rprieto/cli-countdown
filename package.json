@@ -1,0 +1,26 @@
+{
+  "name": "cli-countdown",
+  "version": "1.0.0",
+  "description": "Counts down within a shell script to give users a chance to exit",
+  "author": "Tabcorp Digital Team",
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "countdown",
+    "timer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TabDigital/cli-countdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TabDigital/cli-countdown/issues"
+  },
+  "main": "index.js",
+  "bin": {
+    "countdown": "index.js"
+  },
+  "dependencies": {
+    "optimist": "^0.6.1"
+  }
+}
