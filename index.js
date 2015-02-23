@@ -1,12 +1,16 @@
 #!/usr/bin/env node
 
 var cli = require('optimist')
-.usage('Count down a number of seconds\nUsage: $0 -s [duration] -m "custom message"')
+.usage('Count down a number of seconds\nUsage: $0 -s [duration] -m [custom message]')
 .describe('s', 'Number of seconds')
 .describe('m', 'Custom message')
+.describe('help', 'Show usage')
 .default({ s: 10, m: '' });
 
-if (cli.help) cli.showHelp();
+if (cli.argv.help) {
+  return cli.showHelp();
+}
+
 var seconds = cli.argv.s;
 
 process.on('SIGINT', function() {
