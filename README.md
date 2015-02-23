@@ -32,3 +32,4 @@ If you want `Ctrl-C` to abort the current shell script completely, you will prob
 
 - `countdown -s 10`: timer duration in seconds (default 10)
 - `countdown -m "message"`: message to display (default none)
+- `countdown --help`: display command usage
