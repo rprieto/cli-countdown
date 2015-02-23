@@ -6,6 +6,7 @@ var cli = require('optimist')
 .describe('m', 'Custom message')
 .default({ s: 10, m: '' });
 
+if (cli.help) cli.showHelp();
 var seconds = cli.argv.s;
 
 process.on('SIGINT', function() {
@@ -19,7 +20,7 @@ function timer() {
     --seconds;
     setTimeout(timer, 1000);
   } else {
-    process.stdout.write('\n');
+    process.stdout.write('\r' + cli.argv.m + ' 0\n');
     process.exit(0);
   }
 }
